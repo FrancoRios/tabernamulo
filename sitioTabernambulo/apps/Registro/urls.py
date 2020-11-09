@@ -15,6 +15,13 @@ urlpatterns = [
     # borrar una carrera
     path('borrarTrago/<int:trago_id>', views.borrar_trago, name="borrar_trago"),
 
-    path('add_trago', views.TragoCreate.as_view(), name="add_trago"),
+    path('agregaTrago', views.TragoCreate.as_view(), name="agrega_trago"),
 
+    path('listTrago/', views.TragoList.as_view(), name='list_trago'),
+
+
+    path('editTrago/<int:pk>', views.TragoUpdate.as_view(), name='edit_trago'),
+
+    path('delTrago/<int:pk>', views.TragoDelete.as_view(), name='del_trago'),
 ]
+

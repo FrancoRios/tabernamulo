@@ -2,7 +2,9 @@ from django.shortcuts import render, redirect
 from .models import Trago
 from .forms import TragoForm
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
-import reverse_lazy
+from django.urls import reverse_lazy
+
+
 # Create your views here.
 def listar_trago(request):
     trago = Trago.objects.all()
@@ -57,3 +59,23 @@ class TragoCreate(CreateView):
     form_class = TragoForm
     template_name = 'Registro/trago_form.html'
     success_url = reverse_lazy("listar_trago")
+
+class TragoList(ListView):
+    model = Trago
+    template_name = 'Registro/list_trago.html'
+    # paginate_by = 4
+
+class TragoUpdate(UpdateView):
+    model = Trago
+    form_class = TragoForm
+    template_name = 'Registro/trago_form.html'
+    success_url = reverse_lazy('list_trago')
+
+        
+
+class TragoDelete(DeleteView):
+    model = Trago
+    template_name = 'Registro/trago_delete.html'
+    success_url = reverse_lazy('list_trago')
+
+    
