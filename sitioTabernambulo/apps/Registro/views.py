@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Trago
+from .models import Trago, Ingrediente
 from .forms import TragoForm
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.db.models import Q
+
 
 
 # Create your views here.
@@ -79,3 +81,4 @@ class TragoDelete(DeleteView):
     success_url = reverse_lazy('list_trago')
 
     
+

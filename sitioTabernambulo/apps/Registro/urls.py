@@ -2,6 +2,7 @@ from django.urls import path, include
 from . import views
 from django.contrib.auth.views import login_required
 
+
 urlpatterns = [
 
     # listar las carreras de la bd

@@ -24,7 +24,7 @@ urlpatterns = [
     path('registro/', include('apps.Registro.urls')),
     path('usuario/', include('apps.Usuario.urls')),
      # Login and Logout
-    path('login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/login.html'), name='login'),
+    path('accounts/login/', LoginView.as_view(redirect_authenticated_user=True,template_name='Usuario/login.html'), name='login'),
     path('logout/', LogoutView.as_view(template_name='Usuario/logout.html'), name='logout'),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
 
