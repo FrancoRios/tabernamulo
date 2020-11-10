@@ -1,12 +1,11 @@
-{% extends 'Usuario/base/base.html' %} 
+{% extends 'base.html' %} 
 
 {% block content %}
     <h1>Agregar USUARIO</h1>
     
     <div class="content container">
     <form method="POST">
-        {% csrf_token %} 
-        {{ form.as_p }}
+        {% csrf_token %} {{ form.as_p }}
         <button type="submit">GRABAR</button>
     </form>
     </div>

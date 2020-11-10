@@ -1,5 +1,5 @@
 from django import forms
-from .models import Trago, Miembro
+from .models import Trago, Ingrediente
 
 class TragoForm(forms.ModelForm):
     class Meta:
