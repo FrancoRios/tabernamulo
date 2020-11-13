@@ -1,0 +1,388 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'CSS/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/estilos.css' %}">
+    <script src="{% static 'JS/jquery-3.5.1.slim.min.js' %}"></script>
+    <script src="{% static 'JS/bootstrap.bundle.min.js' %}"></script>
+    <link rel="icon" type="image/png" href="{% static 'IMAGES/icon.png' %}">
+    <script src="{% static 'JS/clic.js' %}"></script>
+    <script src="{% static 'JS/totop.js' %}"></script>
+    <script src="{% static 'JS/fade.js' %}"></script>
+    <script src="{% static 'JS/aparece.js' %}"></script>
+    
+    <title>El Tabernámbulo</title>
+</head>
+
+
+<body>
+
+  <script>document.body.className += ' fade-out';</script>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav_propio">
+        <img class="logo" src="{% static 'IMAGES/logo_index.png' %}" alt="Logo">
+        <a class="navbar-brand" id="brand_propio">El Tabernámbulo</a>
+        <button  id="boton_claro" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Recetas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../bares">Bares</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../login">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <hr class="featurette-divider">
+    <a class="btn btn-dark" data-toggle="collapse" href=".receta" aria-expanded="false" aria-controls="collapse1">
+      Ver/Ocultar Todo
+    </a>
+    <hr class="featurette-divider">
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Alexander</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/Alexander.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse1">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  3 cl. de Ginebra<br />
+                  3 cl de Crema de Cacao incolora<br />
+                  3 cl de Nata liquida</p>
+                  <p><strong>Aderezos</strong><br />
+                  Se espolvorea con chocolate en polvo.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se elabora en coctelera.<br />
+                  Se sirve en copa de cocktail.<br />
+                  Receta de Alejandro Troya, creado en 1915, en New York.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Barracuda</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/barracuda.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse2">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  4,5 cl de Ron dorado<br />
+                  1,5 cl de Galiano<br />
+                  6 cl de Zumo de piña<br />
+                  1 dash (golpe) de Lima Llenar con de Prosecco</p>
+                  <p><strong>Decoración</strong><br />
+                  Guinda roja.</p>
+                  <p><strong>Aderezos</strong><br />
+                  Enfriar los ingredientes y terminar de llenar con el vino de prosecco bien frio.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Directamente en copa de Sparkling.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Bloody Mary</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/bloody_mary.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse3">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  4.5 cl de Vodka<br />
+                  9 cl de Zumo de tomate<br />
+                  1.5 cl de Zumo de limón<br />
+                  2 Dashes (golpes) de Salsa Perrins (Worchestershire)<br />
+                  1 Dash (golpe) de Tabasco</p>
+                  <p><strong>Decoración</strong><br />
+                  Apio fresco y rodaja de limón.</p>
+                  <p><strong>Aderezos</strong><br />
+                  Aderezar con sal de apio, sal y pimienta.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se elabora en vaso mezclador o directamente en vaso hig-ball.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Caipirinha</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/caipirinha.jpeg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse4">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  5 cl de Cachaça<br />
+                  1/2 de Lima cortada en cuartos<br />
+                  2 cucharillas de Azúcar</p>
+                  <p><strong>Decoración</strong><br />
+                  Al gusto.</p>
+                  <p><strong>Aderezos</strong><br />
+                  Colocar el azúcar y la lima en un vaso de coctelera Boston y machacar ligeramente, cerrar la coctelera y agitar, servir en vaso de old fashioned.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se elabora en coctelera Boston, también se puede elaborar directamente en el vaso.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Dirty Martini</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/dirty_martini.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse5">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  6 cl de Vodka 1 cl de vermouth blanco seco<br />
+                  1 cl de caldo de aceitunas</p>
+                  <p><strong>Decoración</strong><br />
+                  1 Aceituna verde.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se elabora en vaso mezclador.<br />
+                  Se sirve en copa de cocktail.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Long Island</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/long_island.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse6">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  1,5 cl de Tequila<br />
+                  1,5 cl de Vodka<br />
+                  1,5 cl de Ron blanco<br />
+                  1,5 cl de Triple seco<br />
+                  1,5 cl de Ginebra<br />
+                  2,5 cl de Zumo de lima</p>
+                  <p><strong>Decoración</strong><br />
+                  Piel de limón en espiral, acompañada de un sorbete.</p>
+                  <p><strong>Aderezos</strong><br />
+                  Se prepara en un vaso con hielo,3cl de sirope de azúcar, se le añaden todos los ingredientes y se pone un golpe de Coca-Cola a continuación remover.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se prepara en vaso de higball.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Margarita</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/margarita.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse7">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  3.5 cl de Tequila<br />
+                  2 cl de Cointreau<br />
+                  1.5 cl de Zumo de lima</p>
+                  <p><strong>Decoración</strong><br />
+                  Guinda roja en el interior.</p>
+                  <p><strong>Aderezos</strong><br />
+                  La copa ha de estar escarchada con sal.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se prepara en coctelera.<br />
+                  Se sirve en copa especial de margarita o en copa de cocktail.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Mimosa</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/mimosa.jpg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse8">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  7.5 cl de Zumo de naranja<br />
+                  7.5 cl de Champagne</p>
+                  <p><strong>Decoración</strong><br />
+                  Guinda roja y media rodaja de naranja.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se prepara directamente en copa de flauta, con los ingredientes fríos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text text-center">Piña Colada</p>
+          </div>
+          <img src="{% static 'IMAGES/TRAGOS/pina_colada.jpeg' %}" class="trago" alt="imagen">
+          <div class="card-body">
+            <p class="text-center">
+              <a class="btn btn-dark w-75" data-toggle="collapse" href="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                Ver receta
+              </a>
+            </p>
+            <div class="collapse receta" id="collapse9">
+              <div class="card card-body">
+                <p><strong>Ingredientes</strong><br />
+                  3 cl de Ron blanco<br />
+                  3 cl de Leche de coco<br />
+                  9 cl de Zumo de Piña</p>
+                  <p><strong>Decoración</strong><br />
+                  Adorne con un triangulo de piña, guinda y sorbetes.</p>
+                  <p><strong>Aderezos</strong><br />
+                  Si se prepara con piña natural se elabora en batidora elèctrica.</p>
+                  <p><strong>Observaciones</strong><br />
+                  Se prepara en coctelera.<br />
+                  Se sirve en copa de long drink.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <button class="btn btn-dark btn-block" onclick="topFunction()" id="myBtn" title="Go to top">Volver arriba</button> 
+    
+  </div>
+
+ 
+
+  <hr class="featurette-divider">
+
+      <footer class="page-footer font-small teal pt-4">
+        <div class="container-fluid text-center text-md-left">
+          <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+              <h6 class="text-uppercase font-weight-bold">Sobre el sitio</h6>
+              <p class="text-justify">Aquí se presenta un sitio sobre el mundo de la Mixología, 
+                es decir sobre el arte de la confección de tragos con el fin de orientar al 
+                aficionado interesado en este mundo sobre las posbiles creaciones de tragos y 
+                cocteles, los ingredientes e instrumentos necesarios y los lugares que pueden 
+                atraer la vista de cualquiera que quiera pasar un buen rato frente a un trago 
+                bien hecho, sea un principiante o un conoseaur de este mundo bohemio.
+              </p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-6 mb-md-0 mb-3">
+              <h6 class="text-uppercase font-weight-bold">Sobre el proyecto</h6>
+              <p class="text-justify">Proyecto de páginas web sobre mixología "El tabernáculo" creadas por 
+                Melvin Sagüez, Alexander Montenegro, Franco Rios y Agustin Valenzuela para 
+                el ramo de Desarrollo de aplicaciones web y Mobile Sección 2 de Duoc UC 
+                impartido por el profesor Arturo Alex Vargas Reyes a ser presentada y 
+                entregada la fecha 13 de Noviembre de 2020.  </p>
+                <p class="text-primary">Construido en HTML con VSCode implementando el uso de Bootstrap, jQuery, 
+                  CSS responsivo, Django y Git. 
+                  </p>
+            </div>
+          </div>
+          <nav id="social">
+            <div class="datos">
+              <p>Por Melvin Sagüez, Alexander Montenegro, Franco Rios y Agustin Valenzuela
+                <img src="{% static 'IMAGES/logo_duoc.png' %}" alt="Duoc UC"></p>
+              
+            </div>
+            <div class="datos">
+              <a href="http://www.facebook.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/1facebook.png' %}" alt="Facebook"></a>
+              <a href="http://www.instagram.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/2instagram.png' %}" alt="Instagram"></a>
+              <a href="http://www.snapchat.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/3snapchat.png' %}" alt="Snapchat"></a>
+              <a href="http://www.twitter.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/4twitter.png' %}" alt="Twitter"></a>
+            </div>
+          </nav>
+        </div>
+      </footer>
+
+</body>
+</html>
