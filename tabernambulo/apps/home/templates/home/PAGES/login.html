@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'CSS/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'CSS/estilos.css' %}">
+    <script src="{% static 'JS/jquery-3.5.1.slim.min.js' %}"></script>
+    <script src="{% static 'JS/bootstrap.bundle.min.js' %}"></script>
+    <link rel="icon" type="image/png" href="{% static 'IMAGES/icon.png' %}">
+    <script src="{% static 'JS/clic.js' %}"></script>
+    <script src="{% static 'JS/totop.js' %}"></script>
+    <script src="{% static 'JS/fade.js' %}"></script>
+    <script src="{% static 'JS/aparece.js' %}"></script>
+    
+    <title>El Tabernámbulo</title>
+</head>
+
+
+<body>
+
+  <script>document.body.className += ' fade-out';</script>
+
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="nav_propio">
+        <img class="logo" src="{% static 'IMAGES/logo_index.png' %}" alt="Logo">
+        <a class="navbar-brand" id="brand_propio">El Tabernámbulo</a>
+        <button  id="boton_claro" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../">Inicio <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../recetas">Recetas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../bares">Bares</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Login</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <hr class="featurette-divider">
+
+
+      
+      <div id="registro" class="container">
+    <h1 class="display">Login</h1><br>
+    <form method="POST" id="formulario">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">Nombre de Usuario</label><br>
+            <input name="username" class="form-control" type="text"/>
+            <div class="bg-danger mt-1">{{ form.errors.username }}</div>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label><br>
+            <input name="password" class="form-control" type="password"/>
+            <div class="bg-danger mt-1">{{ form.errors.password }}</div>
+        </div>
+
+        {% if form.non_field_errors %}
+        <div class="form-group">
+            <div class="bg-danger mt-1 p-2">Login incorrecto!</div>
+        </div>  
+        {% endif %}
+        
+        {{form.non_field_errors}}
+
+        <div class="form-group">
+            <input class="btn-dark" type="submit" value="Enviar"/>
+        </div>
+        
+    </form>
+</div>
+
+
+  </div>
+
+
+    <hr class="featurette-divider">
+    
+      <footer class="page-footer font-small teal pt-4">
+        <div class="container-fluid text-center text-md-left">
+          <div class="row">
+            <div class="col-md-6 mt-md-0 mt-3">
+              <h6 class="text-uppercase font-weight-bold">Sobre el sitio</h6>
+              <p class="text-justify">Aquí se presenta un sitio sobre el mundo de la Mixología, 
+                es decir sobre el arte de la confección de tragos con el fin de orientar al 
+                aficionado interesado en este mundo sobre las posbiles creaciones de tragos y 
+                cocteles, los ingredientes e instrumentos necesarios y los lugares que pueden 
+                atraer la vista de cualquiera que quiera pasar un buen rato frente a un trago 
+                bien hecho, sea un principiante o un conoseaur de este mundo bohemio.
+              </p>
+            </div>
+            <hr class="clearfix w-100 d-md-none pb-3">
+            <div class="col-md-6 mb-md-0 mb-3">
+              <h6 class="text-uppercase font-weight-bold">Sobre el proyecto</h6>
+              <p class="text-justify">Proyecto de páginas web sobre mixología "El tabernáculo" creadas por 
+                Melvin Sagüez, Alexander Montenegro, Franco Rios y Agustin Valenzuela para 
+                el ramo de Desarrollo de aplicaciones web y Mobile Sección 2 de Duoc UC 
+                impartido por el profesor Arturo Alex Vargas Reyes a ser presentada y 
+                entregada la fecha 13 de Noviembre de 2020.  </p>
+                <p class="text-primary">Construido en HTML con VSCode implementando el uso de Bootstrap, jQuery, 
+                  CSS responsivo, Django y Git. 
+                  </p>
+            </div>
+          </div>
+          <nav id="social">
+            <div class="datos">
+              <p>Por Melvin Sagüez, Alexander Montenegro, Franco Rios y Agustin Valenzuela
+                <img src="{% static 'IMAGES/logo_duoc.png' %}" alt="Duoc UC"></p>
+              
+            </div>
+            <div class="datos">
+              <a href="http://www.facebook.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/1facebook.png' %}" alt="Facebook"></a>
+              <a href="http://www.instagram.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/2instagram.png' %}" alt="Instagram"></a>
+              <a href="http://www.snapchat.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/3snapchat.png' %}" alt="Snapchat"></a>
+              <a href="http://www.twitter.com" target="_blank"><img src="{% static 'IMAGES/SOCIAL/4twitter.png' %}" alt="Twitter"></a>
+            </div>
+          </nav>
+        </div>
+      </footer>
+
+</body>
+</html>

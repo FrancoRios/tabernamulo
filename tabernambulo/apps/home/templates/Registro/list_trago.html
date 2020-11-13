@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block titulo_principal %}
+
+<div id=titulo_pagina>
+    Lista de Tragos Registradas
+</div>
+{% endblock %} 
+
+{% block content %} {% if object_list %}
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Grados</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trago in object_list %}
+        <tr>
+            <th scope="row">{{ trago.nombre }} </th>
+            <td>{{ trago.tipo }}</td>
+            <td>${{ trago.grados }}</td>
+
+            <td><a class="btn btn-primary" href="{% url 'edit_trago' trago.id %}">Editar</a></td>
+            <td><a class="btn btn-danger" href="{% url 'del_trago' trago.id %}">Eliminar</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% else %}
+    <h1>No hay registros de tragos</h1>
+{% endif %} {% endblock %}
